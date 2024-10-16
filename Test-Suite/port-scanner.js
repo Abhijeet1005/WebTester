@@ -41,6 +41,7 @@ export function scanPorts(host, portList = [80, 8080, 3000, 5000]) {
     Promise.all(allPromises)
         .then((results) => {
             results.forEach((result) => {
+                //Later can save these in a file 
                 console.log(`Port ${result.port} is ${result.status}`)
             })
         })
